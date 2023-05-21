@@ -100,5 +100,3 @@ const AllToys = () => {
 };
 
 export default AllToys;
-// fff
-// jjj
