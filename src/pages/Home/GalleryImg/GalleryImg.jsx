@@ -69,6 +69,3 @@ const GalleryImg = () => {
 
 export default GalleryImg;
 
-// 
-
-// 
