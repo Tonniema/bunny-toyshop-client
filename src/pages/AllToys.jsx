@@ -14,7 +14,7 @@ const AllToys = () => {
 }
 
   const handleSearch = () => {
-    fetch(`http://localhost:9000/searchText/${searchText}`)
+    fetch(`https://bunny-toyshop-server.vercel.app/searchText/${searchText}`)
       .then(res => res.json())
       .then(data => {
         setTotalDate(data);
@@ -100,4 +100,5 @@ const AllToys = () => {
 };
 
 export default AllToys;
-// Our leader of the club is sure to be a swell addition to any clubhouse. Our Disney Princess doll Snow White Doll will keep you smiling through the day, rain or shine! 
+// fff
+// jjj
