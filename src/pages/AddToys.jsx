@@ -155,5 +155,3 @@ const AddToys = () => {
 };
 
 export default AddToys;
-// 
-// 

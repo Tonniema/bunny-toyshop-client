@@ -58,19 +58,21 @@ const Blog = () => {
                             <div className="space-y-8">
                                 <div className="bg-red-200 p-8">
                                     <h3 className="mb-4 text-2xl font-bold">
-                                        3. Compare SQL and NoSQL databases?
+                                        3. What is Express JS and Next JS?
                                     </h3>
                                     <p className="text-gray-700">
+                                        Express.js is a minimalist web application framework for Node.js, enabling developers to build robust and efficient web applications and APIs with simplicity and ease. It provides a lightweight and flexible structure for handling routes, requests, and middleware, making it a popular choice for Node.js development.<br />
+                                        Next.js is a React framework that enhances the development of web applications with server-side rendering, automatic code splitting, and simplified routing. It allows developers to build optimized and performant React applications with ease, offering features that improve SEO, performance, and development efficiency.
 
                                     </p>
                                 </div>
                                 <div className="bg-red-200 p-8">
                                     <h3 className="mb-4 text-2xl font-bold">
-                                        4. What is Express JS and Next JS?
+                                        4. What is MongoDB aggregate and how does it work?
                                     </h3>
                                     <p className="text-gray-700">
-                                        Express.js is a minimalist web application framework for Node.js, enabling developers to build robust and efficient web applications and APIs with simplicity and ease. It provides a lightweight and flexible structure for handling routes, requests, and middleware, making it a popular choice for Node.js development.<br />
-                                        Next.js is a React framework that enhances the development of web applications with server-side rendering, automatic code splitting, and simplified routing. It allows developers to build optimized and performant React applications with ease, offering features that improve SEO, performance, and development efficiency.
+                                    Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.
+
                                     </p>
                                 </div>
                             </div>
