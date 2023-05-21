@@ -1,0 +1,10 @@
+.progress-container {
+    width: 100%;
+    background-color: #e7fe57;
+  }
+  
+  .Loader {
+    height: 20px;
+    background-color: #4ec89f;
+    width: 0%;
+  }
