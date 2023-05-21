@@ -50,7 +50,7 @@ const AddToys = () => {
         const photo = Full_Form.photo.value
         const Add_doll = { name, price, category, seller_same, update_rating, update_quantity, update_description, update_seller_email, photo ,select }
         console.log(Add_doll);
-        fetch("http://localhost:9000/dolls/",
+        fetch("https://bunny-toyshop-server.vercel.app/dolls/",
         {
             method: "POST",
             headers: { 
@@ -155,3 +155,5 @@ const AddToys = () => {
 };
 
 export default AddToys;
+// 
+// 
