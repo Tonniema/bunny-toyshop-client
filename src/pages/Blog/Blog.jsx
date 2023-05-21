@@ -68,8 +68,7 @@ const Blog = () => {
                                         4. What is Express JS and Next JS?
                                     </h3>
                                     <p className="text-gray-700">
-                                        Express.js is a minimalist web application framework for Node.js, enabling developers to build robust and efficient web applications and APIs with simplicity and ease. It provides a lightweight and flexible structure for handling routes, requests, and middleware, making it a popular choice for Node.js development.<br/>
-                                        Next.js is a React framework that enhances the development of web applications with server-side rendering, automatic code splitting, and simplified routing. It allows developers to build optimized and performant React applications with ease, offering features that improve SEO, performance, and development efficiency.
+                                        
                                     </p>
                                 </div>
                             </div>
