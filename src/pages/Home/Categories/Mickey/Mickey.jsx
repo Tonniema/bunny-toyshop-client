@@ -1,8 +1,12 @@
 //eslint-disable-next-line
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const Mickey = () => {
+    const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
     const [Mickey, setMickey] = useState([])
     useEffect(() => {
         fetch('https://bunny-toyshop-server.vercel.app/mickey')
@@ -10,6 +14,28 @@ const Mickey = () => {
             .then(Doll => setMickey(Doll))
     }, [])
     console.log(Mickey);
+    useEffect(() => {
+        if (user) {
+          // User is logged in, navigate to the desired page
+          const desiredPage = sessionStorage.getItem('desiredPage');
+          if (desiredPage) {
+            navigate(desiredPage);
+            sessionStorage.removeItem('desiredPage');
+          }
+        }
+      }, [user, navigate]);
+    
+      const handleButtonClick = (d1) => {
+        if (!user) {
+            Swal.fire({
+                title: 'Please Login First',
+              })
+          sessionStorage.setItem('desiredPage', `/View_Details/${d1}`);
+          navigate('/login');
+        } else {
+          navigate(`/View_Details/${d1}`);
+        }
+      };
     return (
         <div>
 
@@ -23,7 +49,9 @@ const Mickey = () => {
                             <p>Price: ${m1.price}</p>
                             <p>Rating: ✵{m1.update_rating}✵</p>
                             <p>Powered by {m1.seller_same}</p>
-                            <button  className="font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6   transition ease-in-out delay-150 bg-[#d52c81] hover:-translate-y-1 hover:scale-110 hover:bg-pink-400 duration-300 text-white"><Link to = {`/View_Details/${m1._id}`}>View Details</Link></button>
+                            <button className="font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 mt-6   transition ease-in-out delay-150 bg-[#d52c81] hover:-translate-y-1 hover:scale-110 hover:bg-pink-400 duration-300 text-white" onClick={() => handleButtonClick(m1._id)}>
+                      <Link to={`/View_Toy_Data/${m1._id}`}>View Details</Link>
+                    </button>
                         </div>
                     </div>
                 </section>)

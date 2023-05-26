@@ -7,7 +7,7 @@ const MarqueeSection = () => {
     <div className='bg-[url("https://c8.alamy.com/comp/2H11JEP/abstract-neutral-background-white-geometric-mosaic-smooth-triangular-wallpaper-minimal-website-backdrop-elegant-light-template-vector-2H11JEP.jpg")]'>
             <div className='text-center '>
                 
-                <h1 className='text-[1.6em] md:text-3xl font-bold py-8  text-[#d52c81] '>POPULAR TOY BRANDS</h1>
+                <h1 className='text-[1.6em] md:text-3xl text-al font-bold py-8  text-[#d52c81] '>POPULAR TOY BRANDS</h1>
             </div>
             <div className='  '>
         <Marquee speed={40} pauseOnClick>

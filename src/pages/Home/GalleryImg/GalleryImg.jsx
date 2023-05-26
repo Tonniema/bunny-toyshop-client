@@ -54,7 +54,7 @@ const GalleryImg = () => {
     return (
         <div className='bg-[url("https://static.vecteezy.com/system/resources/previews/002/069/547/original/cute-cartoon-unicorn-seamless-baby-pattern-background-illustration-with-pastel-flowers-children-texture-for-kids-wallpaper-fills-web-page-background-vector.jpg")]'>
             <div>
-                <h2 className='text-4xl font-extrabold text-center text-[#d52c81] py-10'>Gallery Grid</h2>
+                <h2 className='md:text-4xl text-xl font-extrabold text-center text-[#d52c81] py-10'>Gallery Grid</h2>
             </div>
             <div  className='grid grid-cols-1 md:grid-cols-3 gap-5 p-5' >
                 {

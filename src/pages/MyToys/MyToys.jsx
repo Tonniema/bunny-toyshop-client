@@ -11,6 +11,7 @@ const  MyToys = () => {
 Title('My Toys')
   const { user } = useContext(AuthContext)
   console.log(user);
+  const[asc, setAsc] = useState(true);
   //eslint-disable-next-line
   const [Dolls, setDolls] = useState([])
   const url = (`https://bunny-toyshop-server.vercel.app/mydolls?email=${user?.email}`)
@@ -58,10 +59,16 @@ Title('My Toys')
 }
   return (
     <div>
+      <div className='flex justify-center'>
+      <button className='px-5 py-3 rounded-md  transition ease-in-out delay-150 bg-[#d52c81] hover:-translate-y-1 hover:scale-110 hover:bg-pink-400 duration-300 text-white' onClick={() => setAsc(!asc)}>{asc? 'Price: High to Low' : 'Price: Low to High'}</button>
+      </div>
+      <div>
       <div className='text-center '>
                 
                 <h1 className='text-[1.6em] md:text-3xl font-bold py-8  text-[#d52c81] '>My Toys</h1>
             </div>
+            
+      </div>
     <div className="overflow-x-auto w-full">
       <table className="table w-full">
         {/* head */}
